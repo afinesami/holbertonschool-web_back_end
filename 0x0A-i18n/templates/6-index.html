@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{ gettext('home_title') }}
+        </title>
+    </head>
+    <body>
+        <h1>{{ gettext('home_header') }}</h1>
+        {% if g.user %}
+    <p>{{ gettext('logged_in_as', username=g.user['name']) }}</p>
+    {% else %}
+    <p>{{ gettext('not_logged_in') }}</p>
+    {% endif %}
+    </body>
+</html>
